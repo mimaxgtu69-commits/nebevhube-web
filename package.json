@@ -1,0 +1,20 @@
+{
+  "name": "nebevhube-web",
+  "version": "1.0.0",
+  "description": "Webová prezentace letního zahradního FoodTrucku Nebe v hubě v Blažkově",
+  "main": "index.html",
+  "scripts": {
+    "dev": "npx http-server -p 3000"
+  },
+  "keywords": [
+    "burger",
+    "foodtruck",
+    "garden",
+    "bistro"
+  ],
+  "author": "Nebe v hubě",
+  "license": "ISC",
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
+}

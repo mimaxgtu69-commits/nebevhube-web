@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nebe v hubě | Letní zahradní FoodTruck Křižanov</title>
+    <meta name="description" content="Poctivé domácí burgery, tortilly a další pochutiny přímo z letního FoodTrucku na zahradě v Křižanově. Přijeďte ochutnat nebe v hubě!">
+    <meta name="keywords" content="burgery, foodtruck, Křižanov, zahrada, restaurace, jídlo, Vysočina, nebe v hubě">
+    <meta name="author" content="Nebe v hubě">
+    
+    <!-- Open Graph for Social Media -->
+    <meta property="og:title" content="Nebe v hubě | Letní zahradní FoodTruck Křižanov">
+    <meta property="og:description" content="Poctivé domácí burgery z grilu na naší zahradě. Přijeďte ochutnat!">
+    <meta property="og:image" content="images/gourmet_burger.png">
+    <meta property="og:type" content="website">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Montserrat:wght@400;600;700;800&family=Special+Elite&display=swap" rel="stylesheet">
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Ambient Sound Overlay Toggle (Optional enhancement) -->
+    <div class="sound-control" id="soundControl" title="Zvuk letního grilování">
+        <span class="icon">🔥</span>
+    </div>
+
+    <!-- Navigation Header -->
+    <header class="main-header">
+        <div class="header-container">
+            <a href="#hero" class="logo-text">nebe v hubě</a>
+            <button class="nav-toggle" id="navToggle" aria-label="Menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+            <nav class="nav-menu" id="navMenu">
+                <ul>
+                    <li><a href="#hero">Úvod</a></li>
+                    <li><a href="#menu-section">Jídelní lístek</a></li>
+                    <li><a href="#atmosphere">O nás</a></li>
+                    <li><a href="#contact">Kde nás najdete</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- HERO SECTION: Designed based on the Plywood Sign ("cedule") -->
+    <section class="hero" id="hero">
+        <div class="wood-sign-board">
+            <!-- Decorative wood knots & nails -->
+            <div class="sign-nail nail-tl"></div>
+            <div class="sign-nail nail-tr"></div>
+            <div class="sign-nail nail-bl"></div>
+            <div class="sign-nail nail-br"></div>
+            
+            <div class="sign-content">
+                <!-- Floating clouds left and right -->
+                <div class="cloud cloud-left">
+                    <svg viewBox="0 0 100 60" width="120" fill="none" stroke="black" stroke-width="2">
+                        <path d="M10,40 C10,30 20,20 35,20 C40,10 60,10 70,20 C85,15 95,25 95,40 C95,50 85,55 70,55 L35,55 C20,55 10,50 10,40 Z" stroke-dasharray="3 3"/>
+                    </svg>
+                </div>
+                <div class="cloud cloud-right">
+                    <svg viewBox="0 0 100 60" width="100" fill="none" stroke="black" stroke-width="2">
+                        <path d="M10,40 C10,30 20,20 35,20 C40,10 60,10 70,20 C85,15 95,25 95,40 C95,50 85,55 70,55 L35,55 C20,55 10,50 10,40 Z" stroke-dasharray="3 3"/>
+                    </svg>
+                </div>
+                
+                <h1 class="sign-title-arched">
+                    <svg viewBox="0 0 500 120" width="100%">
+                        <path id="textCurve" d="M 30,100 Q 250,25 470,100" fill="none" stroke="transparent"/>
+                        <text font-family="'Caveat', cursive" font-size="64px" font-weight="700" fill="#1a1a1a" text-anchor="middle">
+                            <textPath href="#textCurve" startOffset="50%">nebe v hubě</textPath>
+                        </text>
+                    </svg>
+                </h1>
+                
+                <!-- Main Interactive Burger -->
+                <div class="burger-interactive-container" id="burgerInteractive">
+                    <img src="images/burger_sketch.png" alt="Interaktivní burger Nebe v hubě" class="burger-sketch-img">
+                    <div class="burger-glow"></div>
+                </div>
+                
+                <div class="sign-footer">
+                    <p class="sign-location">Letní zahradní FoodTruck • Křižanov</p>
+                    <a href="#menu-section" class="scroll-down-btn" id="scrollDownBtn">
+                        <span class="arrow-down">↓</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Rustic log legs holding the sign -->
+        <div class="log-supports">
+            <div class="log-support log-left"></div>
+            <div class="log-support log-right"></div>
+        </div>
+    </section>
+
+    <!-- MENU SECTION: Stained parchment menu combined with wooden background -->
+    <section class="menu-section" id="menu-section">
+        <div class="menu-container">
+            
+            <!-- Menu Top Title Ribbon -->
+            <div class="menu-header-ribbon">
+                <div class="ribbon-tail-l"></div>
+                <div class="ribbon-body">
+                    <h2>Jídelní lístek</h2>
+                </div>
+                <div class="ribbon-tail-r"></div>
+            </div>
+            
+            <div class="menu-grid">
+                
+                <!-- COLUMN 1: BURGERY -->
+                <div class="menu-column scroll-reveal">
+                    <div class="category-banner">
+                        <h3>Burgery</h3>
+                    </div>
+                    
+                    <div class="menu-items-list">
+                        <!-- Jalapeño -->
+                        <div class="menu-item" data-food="jalapeno">
+                            <div class="item-header">
+                                <span class="item-name">Jalapeño <span class="allergens">A: 1,3,7</span></span>
+                                <span class="item-price">195 Kč</span>
+                            </div>
+                            <p class="item-description">hovězí maso (150g), cheddar, slanina, jalapeño papričky, rajčata, listový salát, majonéza</p>
+                        </div>
+                        
+                        <!-- Chipotle -->
+                        <div class="menu-item" data-food="chipotle">
+                            <div class="item-header">
+                                <span class="item-name">Chipotle <span class="allergens">A: 1,3,7</span></span>
+                                <span class="item-price">195 Kč</span>
+                            </div>
+                            <p class="item-description">hovězí maso (150g), cheddar, slanina, červená cibule, uzené papričky, majonéza, nakládané okurky, listový salát</p>
+                        </div>
+                        
+                        <!-- Cheddar Bacon -->
+                        <div class="menu-item" data-food="cheddar-bacon">
+                            <div class="item-header">
+                                <span class="item-name">Cheddar Bacon <span class="allergens">A: 1,3,7</span></span>
+                                <span class="item-price">195 Kč</span>
+                            </div>
+                            <p class="item-description">hovězí maso (150g), slanina, cibulové chutney, majonéza, cheddar, nakládané okurky</p>
+                        </div>
+                        
+                        <!-- Jack Daniels -->
+                        <div class="menu-item" data-food="jack-daniels">
+                            <div class="item-header">
+                                <span class="item-name">Jack Daniels <span class="allergens">A: 1,3,7</span></span>
+                                <span class="item-price">195 Kč</span>
+                            </div>
+                            <p class="item-description">hovězí maso (150g), listový salát, slanina, BBQ omáčka s bourbonem, cibulové chutney, nakládané okurky, červená cibule</p>
+                        </div>
+                        
+                        <!-- Caesar Burger -->
+                        <div class="menu-item" data-food="caesar-burger">
+                            <div class="item-header">
+                                <span class="item-name">Caesar Burger <span class="allergens">A: 1,3,7</span></span>
+                                <span class="item-price">195 Kč</span>
+                            </div>
+                            <p class="item-description">hovězí maso (150g), listový salát, majonéza, parmazán, slanina</p>
+                        </div>
+                        
+                        <!-- Double Burger -->
+                        <div class="menu-item highlighted" data-food="double-burger">
+                            <div class="item-header">
+                                <span class="item-name">Double Burger <span class="allergens">A: 1,3,7</span></span>
+                                <span class="item-price">295 Kč</span>
+                            </div>
+                            <p class="item-description">hovězí maso (300g), listový salát, cibulové kroužky, BBQ omáčka, vejce, cheddar, červená cibule, slanina, nakládané okurky, rajče</p>
+                        </div>
+                        
+                        <!-- Cheeseburger -->
+                        <div class="menu-item" data-food="cheeseburger">
+                            <div class="item-header">
+                                <span class="item-name">Cheeseburger <span class="allergens">A: 1,3,7</span></span>
+                                <span class="item-price">195 Kč</span>
+                            </div>
+                            <p class="item-description">hovězí maso (150g), listový salát, cheddarová omáčka, slanina, nakládané okurky</p>
+                        </div>
+                        
+                        <!-- Cheese Dream -->
+                        <div class="menu-item" data-food="cheese-dream">
+                            <div class="item-header">
+                                <span class="item-name">Cheese Dream <span class="allergens">A: 1,3,7</span></span>
+                                <span class="item-price">195 Kč</span>
+                            </div>
+                            <p class="item-description">smažený sýr (150g), listový salát, tatarka, rajčata</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- COLUMN 2: TORTILLY & OMÁČKY -->
+                <div class="menu-column scroll-reveal">
+                    <div class="category-banner">
+                        <h3>Tortilly</h3>
+                    </div>
+                    
+                    <div class="menu-items-list">
+                        <!-- S hovězím masem -->
+                        <div class="menu-item" data-food="tortilla-beef">
+                            <div class="item-header">
+                                <span class="item-name">S hovězím masem <span class="allergens">A: 1,3,7</span></span>
+                                <span class="item-price">185 Kč</span>
+                            </div>
+                            <p class="item-description">hovězí maso (150g), červená cibule, salát, slanina, cheddar, omáčka, sterilovaná okurka</p>
+                        </div>
+                        
+                        <!-- S kuřecím masem -->
+                        <div class="menu-item" data-food="tortilla-chicken">
+                            <div class="item-header">
+                                <span class="item-name">S kuřecím masem <span class="allergens">A: 1,3,7</span></span>
+                                <span class="item-price">175 Kč</span>
+                            </div>
+                            <p class="item-description">kuřecí smaženky, zelenina, salát, cheddar omáčka</p>
+                        </div>
+                        
+                        <!-- Quesadilla -->
+                        <div class="menu-item" data-food="quesadilla">
+                            <div class="item-header">
+                                <span class="item-name">Quesadilla <span class="allergens">A: 1,3,7</span></span>
+                                <span class="item-price">175 Kč</span>
+                            </div>
+                            <p class="item-description">kuřecí maso, BBQ omáčka, sýr</p>
+                        </div>
+                    </div>
+                    
+                    <div class="category-banner margin-top">
+                        <h3>Omáčky</h3>
+                    </div>
+                    
+                    <div class="menu-items-list">
+                        <div class="menu-item basic-item">
+                            <div class="item-header">
+                                <span class="item-name">Kečup, Tatarka <span class="item-size">(50g)</span></span>
+                                <span class="item-price">25 Kč</span>
+                            </div>
+                        </div>
+                        <div class="menu-item basic-item">
+                            <div class="item-header">
+                                <span class="item-name">Cheddar, Barbecue, Chipotle <span class="item-size">(50g)</span></span>
+                                <span class="item-price">45 Kč</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Atmospheric Quote Box inside menu -->
+                    <div class="menu-quote-box">
+                        <p class="quote-text">"Pánové na té zahradě dělají opravdové gastro nebe."</p>
+                        <p class="quote-author">— Spokojený soused z Vysočiny</p>
+                    </div>
+                </div>
+                
+                <!-- COLUMN 3: PŘÍLOHY, SALÁTY, DEZERTY & NÁPOJE -->
+                <div class="menu-column scroll-reveal">
+                    <div class="category-banner">
+                        <h3>Přílohy</h3>
+                    </div>
+                    
+                    <div class="menu-items-list compact">
+                        <div class="menu-item basic-item" data-food="potatoes-krizanov">
+                            <div class="item-header">
+                                <span class="item-name">Křižanovské brambory <span class="item-size">(150g)</span></span>
+                                <span class="item-price">55 Kč</span>
+                            </div>
+                        </div>
+                        <div class="menu-item basic-item" data-food="potatoes-batat">
+                            <div class="item-header">
+                                <span class="item-name">Batátové hranolky <span class="item-size">(150g)</span></span>
+                                <span class="item-price">55 Kč</span>
+                            </div>
+                        </div>
+                        <div class="menu-item basic-item" data-food="potatoes-steak">
+                            <div class="item-header">
+                                <span class="item-name">Steakové hranolky <span class="item-size">(150g)</span></span>
+                                <span class="item-price">55 Kč</span>
+                            </div>
+                        </div>
+                        <div class="menu-item basic-item">
+                            <div class="item-header">
+                                <span class="item-name">Cibulové kroužky <span class="item-size">(150g)</span></span>
+                                <span class="item-price">55 Kč</span>
+                            </div>
+                        </div>
+                        <div class="menu-item basic-item">
+                            <div class="item-header">
+                                <span class="item-name">Jalapeños sýrové nugetky <span class="item-size">(6 ks)</span></span>
+                                <span class="item-price">55 Kč</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="category-banner margin-top">
+                        <h3>Saláty</h3>
+                    </div>
+                    
+                    <div class="menu-items-list">
+                        <div class="menu-item" data-food="salad-caesar">
+                            <div class="item-header">
+                                <span class="item-name">Caesar <span class="allergens">A: 1,3,7</span></span>
+                                <span class="item-price">195 Kč</span>
+                            </div>
+                            <p class="item-description">římský salát, kuřecí maso (100g), krutony, dresink, parmazán</p>
+                        </div>
+                        <div class="menu-item basic-item">
+                            <div class="item-header">
+                                <span class="item-name">Coleslaw <span class="item-size">(100g)</span> <span class="allergens">A: 1,3,7</span></span>
+                                <span class="item-price">45 Kč</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="category-banner margin-top">
+                        <h3>Dezerty</h3>
+                    </div>
+                    
+                    <div class="menu-items-list">
+                        <div class="menu-item" data-food="crepe-nutella">
+                            <div class="item-header">
+                                <span class="item-name">Palačinka s Nutellou a banánem <span class="allergens">A: 1,3,7</span></span>
+                                <span class="item-price">65 Kč</span>
+                            </div>
+                        </div>
+                        <div class="menu-item" data-food="crepe-grandma">
+                            <div class="item-header">
+                                <span class="item-name">Babiččina palačinka <span class="item-size">(mák, povidla)</span> <span class="allergens">A: 1,3,7</span></span>
+                                <span class="item-price">65 Kč</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="category-banner margin-top">
+                        <h3>Nápoje</h3>
+                    </div>
+                    
+                    <div class="menu-items-list">
+                        <div class="menu-item basic-item">
+                            <div class="item-header">
+                                <span class="item-name">Dle aktuální nabídky</span>
+                                <span class="item-status-pill">Pivo & Limo</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            
+            <!-- Menu note & footer decoration -->
+            <div class="menu-footer-note">
+                <p>* Seznam alergenů je na vyžádání u obsluhy. Ceny jsou uvedeny včetně DPH.</p>
+                <div class="rosemary-branch-decor">🌱</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- VOUCHERS SECTION: Gift vouchers details -->
+    <section class="vouchers-section" id="vouchers">
+        <div class="container">
+            <div class="vouchers-grid scroll-reveal">
+                <div class="vouchers-images-container">
+                    <div class="voucher-img-card">
+                        <img src="images/voucher_500.jpg" alt="Dárkový poukaz Nebe v hubě 500 Kč">
+                        <span class="voucher-label">Poukaz 500 Kč</span>
+                    </div>
+                    <div class="voucher-img-card">
+                        <img src="images/voucher_1000.jpg" alt="Dárkový poukaz Nebe v hubě 1000 Kč">
+                        <span class="voucher-label">Poukaz 1000 Kč</span>
+                    </div>
+                </div>
+                <div class="vouchers-text-content">
+                    <span class="section-subtitle">Skvělé jako dárek</span>
+                    <h2 class="section-title">Darujte nebe v hubě</h2>
+                    <p class="lead">Udělejte radost svým blízkým, přátelům nebo kolegům dárkovým poukazem!</p>
+                    <p>Nabízíme dárkové poukazy v hodnotách **500 Kč** a **1000 Kč**, které lze uplatnit na jakékoliv jídlo i pití z naší nabídky. Poukazy jsou vytištěny v krásném rustikálním designu na tvrdém papíře a zakoupit je můžete přímo u naší obsluhy u FoodTrucku.</p>
+                    <div class="voucher-badges">
+                        <span class="badge">🎟️ Poukaz 500 Kč</span>
+                        <span class="badge">🎟️ Poukaz 1000 Kč</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ATMOSPHERE SECTION: Introducing the garden and guys -->
+    <section class="atmosphere-section" id="atmosphere">
+        <div class="section-decor-rope"></div>
+        <div class="container">
+            <div class="atmosphere-grid">
+                <div class="atmosphere-text-content scroll-reveal">
+                    <span class="section-subtitle">Náš příběh</span>
+                    <h2 class="section-title">Letní bistro na zahradě</h2>
+                    <p class="lead">Uprostřed malebného Křižanova na Vysočině jsme pro vás otevřeli letní zahradní bistro s FoodTruckem. Dva kamarádi, jeden sen a spousta skvělého jídla.</p>
+                    <p>Všechny naše burgery připravujeme z čerstvého hovězího masa na lávovém grilu, v křupavých bulkách a s našimi vlastnoručně vyladěnými omáčkami. K tomu čepujeme vychlazené pivo a mícháme domácí limonády. To vše si můžete vychutnat v klidu a stínu naší zahrady.</p>
+                    
+                    <div class="features-list">
+                        <div class="feature-item">
+                            <span class="feature-icon">🥩</span>
+                            <div>
+                                <h4>100% Hovězí maso</h4>
+                                <p>Používáme výhradně kvalitní čerstvé maso od místních dodavatelů.</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon">🌳</span>
+                            <div>
+                                <h4>Pohoda na zahradě</h4>
+                                <p>Žádný spěch. Posaďte se u nás na trávník nebo pod slunečník.</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon">👨‍🍳</span>
+                            <div>
+                                <h4>Kamarádský přístup</h4>
+                                <p>Děláme gastro s láskou a rádi si s vámi popovídáme.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="atmosphere-visual scroll-reveal">
+                    <!-- Overlapping image collage styled with parchment/wooden frames -->
+                    <div class="image-collage">
+                        <div class="collage-img img-main">
+                            <img src="images/gourmet_burger.png" alt="Šťavnatý burger z naší zahrady">
+                            <span class="label">Jalapeño Burger</span>
+                        </div>
+                        <div class="collage-img img-sub">
+                            <img src="images/chicken_tortilla.png" alt="Kuřecí tortilla s hranolkami">
+                            <span class="label">Kuřecí Tortilla & Hranolky</span>
+                        </div>
+                        <!-- Log support decoration under collage -->
+                        <div class="decor-log"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT, OPENING HOURS & GOOGLE MAP SECTION -->
+    <section class="contact-section" id="contact">
+        <div class="container">
+            <h2 class="section-title text-center">Stavte se na jedno nebe</h2>
+            <p class="section-subtitle text-center">Těšíme se na vaši návštěvu</p>
+            
+            <div class="contact-grid">
+                <!-- Box 1: Opening hours -->
+                <div class="contact-box scroll-reveal">
+                    <div class="box-inner">
+                        <div class="icon-wrap">🕒</div>
+                        <h3>Otevírací doba</h3>
+                        <p class="season-note">Během letní sezóny (Květen - Září)</p>
+                        
+                        <ul class="hours-list">
+                            <li><span>Pátek</span> <strong>15:00 – 21:00</strong></li>
+                            <li><span>Sobota</span> <strong>12:00 – 21:00</strong></li>
+                            <li><span>Neděle</span> <strong>12:00 – 17:00</strong></li>
+                            <li><span>Pondělí - Čtvrtek</span> <strong class="closed">Zavřeno</strong></li>
+                        </ul>
+                        <p class="stories-alert">‼️ Aktuální otevírací doba vždy ve stories, tak sleduj 👀‼️</p>
+                        <p class="weather-alert">⚠️ V případě nepříznivého počasí (silný déšť) může být zavřeno. Aktuální info sdílíme na našich sociálních sítích.</p>
+                    </div>
+                </div>
+                
+                <!-- Box 2: Address & Contact -->
+                <div class="contact-box scroll-reveal">
+                    <div class="box-inner">
+                        <div class="icon-wrap">📍</div>
+                        <h3>Kde nás najdete</h3>
+                        <p class="address-text">
+                            <strong>Nebe v hubě</strong><br>
+                            Masarykovo nám. 164<br>
+                            594 51 Křižanov<br>
+                            Kraj Vysočina, Česká republika
+                        </p>
+                        
+                        <div class="contact-actions">
+                            <a href="https://www.facebook.com/profile.php?id=61579686766042" target="_blank" class="btn btn-facebook">✉️ Napište nám na Facebooku</a>
+                            <div class="social-links">
+                                <a href="https://www.google.com/maps/place/Nebe+v+hub%C4%9B/@49.3908778,16.1063706,20z/data=!4m6!3m5!1s0x470d7b0022f08acb:0x1f11cfbc85325d62!8m2!3d49.3908778!4d16.1063706!16s%2Fg%2F11z75fjygt" target="_blank" class="social-link gmaps" title="Google Maps">Google Maps 🗺️</a>
+                                <a href="https://mapy.cz/cs/zakladni?q=Nebe%20v%20hub%C4%9B%20Bla%C5%BEkov&source=firm&id=14008362&ds=2&x=16.1061609&y=49.3906778&z=19" target="_blank" class="social-link mapycz" title="Mapy.cz">Mapy.cz 🗺️</a>
+                                <a href="https://www.facebook.com/profile.php?id=61579686766042" target="_blank" class="social-link facebook" title="Facebook">Facebook 👥</a>
+                                <a href="https://www.instagram.com/nebe_v.hube/" target="_blank" class="social-link instagram" title="Instagram">Instagram 📸</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Styled Map container with custom fallback styling -->
+            <div class="map-container scroll-reveal">
+                <div class="map-overlay-content">
+                    <span class="pin-icon">📍</span>
+                    <h3>Nebe v hubě</h3>
+                    <p>Masarykovo nám. 164, Křižanov</p>
+                    <a href="https://www.google.com/maps/place/Nebe+v+hub%C4%9B/@49.3908778,16.1063706,20z/" target="_blank" class="btn btn-sm">Otevřít navigaci</a>
+                </div>
+                <!-- Embedded Leaflet or Iframe Map of Blažkov -->
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d326.6852441995874!2d16.106093557876805!3d49.39087132958213!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470d7b0022f08acb%3A0x1f11cfbc85325d62!2sNebe%20v%20hub%C4%9B!5e0!3m2!1scs!2scs!4v1716447000000!5m2!1scs!2scs" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="main-footer">
+        <div class="container text-center">
+            <p class="footer-logo">nebe v hubě</p>
+            <p class="copyright">&copy; 2026 nebevhube.eu. Všechna práva vyhrazena. Vytvořeno s ❤️ pro mistry grilu.</p>
+        </div>
+    </footer>
+
+    <!-- INTERACTIVE DETAIL MODAL FOR FOOD ITEMS -->
+    <div class="food-modal" id="foodModal">
+        <div class="modal-backdrop" id="modalBackdrop"></div>
+        <div class="modal-card">
+            <button class="modal-close" id="modalClose" aria-label="Zavřít">&times;</button>
+            <div class="modal-image-wrap">
+                <img src="" alt="" id="modalImg">
+                <span class="modal-price" id="modalPrice"></span>
+            </div>
+            <div class="modal-info">
+                <h3 id="modalName">Název jídla</h3>
+                <span class="modal-allergens" id="modalAllergens">Alergeny</span>
+                <p id="modalDesc" class="modal-description">Popis jídla</p>
+                
+                <div class="modal-cta">
+                    <p class="cta-text">Dostali jste chuť? Přijďte k nám na zahradu nebo napište na náš Facebook či Instagram!</p>
+                    <a href="https://www.facebook.com/profile.php?id=61579686766042" target="_blank" class="btn">✉️ Napsat na Facebook</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="app.js"></script>
+</body>
+</html>
